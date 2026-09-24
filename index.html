@@ -82,7 +82,7 @@ function renderStopMedia(stop) {
     const selected = stop.files ? stop.files.filter(file => available.includes(file)) : available;
     return renderMedia(key, selected, stop.title);
   }).join("");
-  return media ? `<div class="stop-gallery">${media}</div>` : "";
+  return media ? `<div class="stop-gallery${stop.featured ? " is-featured" : ""}">${media}</div>` : "";
 }
 
 function renderLegMap(fromLabel, fromQuery, toLabel, toQuery, drive) {

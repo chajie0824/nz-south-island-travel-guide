@@ -65,7 +65,7 @@ const guideDays = [
     stops:[
       {title:"Real Guns New Zealand（实弹射击场）", note:"山谷、雪景和射击体验放在一起，是当天记忆点最强的一站。", album:"DAY4/realgun"},
       {title:"Arrowtown（箭镇）", note:"在老街和华人淘金遗址一带散步。", album:"DAY4/箭镇"},
-      {title:"Skyline Queenstown（皇后镇天际缆车）", note:"如果在皇后镇待三天，推荐买三日票。我们三天坐了五次。", album:"DAY4/皇后镇 Skyline 天际缆车"}
+      {title:"Skyline Queenstown（皇后镇天际缆车）", note:"如果在皇后镇待三天，推荐买三日票。我们三天坐了五次。", album:"DAY4/皇后镇 Skyline 天际缆车", featured:true}
     ],
     callout:"皇后镇连住三天的话，三日缆车票很值得：我们三天坐了 5 次。"
   },
