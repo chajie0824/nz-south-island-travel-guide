@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
   <title id="title">新西兰南岛中线与东线十一天自驾路线图</title>
-  <desc id="desc">从基督城经蒂卡波、库克山、瓦纳卡、皇后镇、蒂阿瑙与米尔福德峡湾，再经达尼丁、Kātiki Point 和奥玛鲁返回基督城，并列出主要城镇间纯驾驶时间。</desc>
+  <desc id="desc">从基督城经蒂卡波、库克山、瓦纳卡、皇后镇、蒂阿瑙与米尔福德峡湾，再经达尼丁和奥玛鲁返回基督城，并列出主要城镇间纯驾驶时间。</desc>
   <defs>
     <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#092f46" stop-opacity=".25"/><stop offset="1" stop-color="#061f30" stop-opacity=".7"/></linearGradient>
     <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4ead3"/><stop offset=".55" stop-color="#d9e2cf"/><stop offset="1" stop-color="#c1d2c6"/></linearGradient>
@@ -25,9 +25,7 @@
 <g class="stop"><line class="leader" x1="480.1" y1="799.6" x2="356.1" y2="897.6"/><circle cx="480.1" cy="799.6" r="10"/><circle class="core" cx="480.1" cy="799.6" r="4"/><text x="348.1" y="891.6" text-anchor="end"><tspan class="day">DAY 6·7·8</tspan><tspan class="name" x="348.1" dy="26">蒂阿瑙</tspan></text></g>
 <g class="stop"><line class="leader" x1="500.0" y1="702.4" x2="366.0" y2="620.4"/><circle cx="500.0" cy="702.4" r="10"/><circle class="core" cx="500.0" cy="702.4" r="4"/><text x="358.0" y="614.4" text-anchor="end"><tspan class="day">DAY 7</tspan><tspan class="name" x="358.0" dy="26">米尔福德峡湾</tspan></text></g>
 <g class="stop"><line class="leader" x1="742.8" y1="861.3" x2="846.8" y2="953.3"/><circle cx="742.8" cy="861.3" r="10"/><circle class="core" cx="742.8" cy="861.3" r="4"/><text x="854.8" y="947.3" text-anchor="start"><tspan class="day">DAY 8·9</tspan><tspan class="name" x="854.8" dy="26">达尼丁</tspan></text></g>
-<g class="stop"><line class="leader" x1="776.8" y1="797.0" x2="903.8" y2="861.0"/><circle cx="776.8" cy="797.0" r="10"/><circle class="core" cx="776.8" cy="797.0" r="4"/><text x="911.8" y="855.0" text-anchor="start"><tspan class="day">DAY 9</tspan><tspan class="name" x="911.8" dy="26">Kātiki Point</tspan></text></g>
 <g class="stop"><line class="leader" x1="787.2" y1="758.9" x2="921.2" y2="734.9"/><circle cx="787.2" cy="758.9" r="10"/><circle class="core" cx="787.2" cy="758.9" r="4"/><text x="929.2" y="728.9" text-anchor="start"><tspan class="day">DAY 9·10</tspan><tspan class="name" x="929.2" dy="26">奥玛鲁</tspan></text></g>
-<g class="stop"><line class="leader" x1="813.7" y1="666.9" x2="955.7" y2="656.9"/><circle cx="813.7" cy="666.9" r="10"/><circle class="core" cx="813.7" cy="666.9" r="4"/><text x="963.7" y="650.9" text-anchor="start"><tspan class="day">DAY 10</tspan><tspan class="name" x="963.7" dy="26">Timaru</tspan></text></g>
   <g class="legend" transform="translate(72 900)">
     <rect width="350" height="118" rx="20"/>
     <line x1="28" y1="37" x2="84" y2="37"/><circle cx="56" cy="37" r="7"/>
@@ -47,9 +45,8 @@
 <g transform="translate(0 412)"><text class="drive-name" x="28" y="0">皇后镇 → 蒂阿瑙</text><text class="drive-time" x="414" y="0" text-anchor="end">约 2小时</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
 <g transform="translate(0 466)"><text class="drive-name" x="28" y="0">蒂阿瑙 ↔ 米尔福德</text><text class="drive-time" x="414" y="0" text-anchor="end">单程约 2小时</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
 <g transform="translate(0 520)"><text class="drive-name" x="28" y="0">蒂阿瑙 → 达尼丁</text><text class="drive-time" x="414" y="0" text-anchor="end">约 3小时30分</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
-<g transform="translate(0 574)"><text class="drive-name" x="28" y="0">达尼丁 → Kātiki Point</text><text class="drive-time" x="414" y="0" text-anchor="end">约 1小时15分</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
-<g transform="translate(0 628)"><text class="drive-name" x="28" y="0">Kātiki Point → 奥玛鲁</text><text class="drive-time" x="414" y="0" text-anchor="end">约 45分</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
-<g transform="translate(0 682)"><text class="drive-name" x="28" y="0">奥玛鲁 → Timaru → 基督城</text><text class="drive-time" x="414" y="0" text-anchor="end">约 3小时</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
+<g transform="translate(0 574)"><text class="drive-name" x="28" y="0">达尼丁 → 奥玛鲁</text><text class="drive-time" x="414" y="0" text-anchor="end">约 2小时</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
+<g transform="translate(0 628)"><text class="drive-name" x="28" y="0">奥玛鲁 → 基督城</text><text class="drive-time" x="414" y="0" text-anchor="end">约 3小时</text><line class="drive-rule" x1="28" y1="16" x2="414" y2="16"/></g>
   </g>
   <text class="credit" x="1728" y="1045" text-anchor="end">Coastline data: Natural Earth · Original route graphic</text>
   <style>
