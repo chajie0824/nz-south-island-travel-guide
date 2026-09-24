@@ -1443,7 +1443,8 @@ footer {
 }
 .stop-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  justify-content: start;
   align-items: start;
   gap: 11px;
   padding: 11px;
