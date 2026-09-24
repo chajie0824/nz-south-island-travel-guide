@@ -1461,10 +1461,6 @@ footer {
   aspect-ratio: auto;
   object-fit: contain;
 }
-/* a lone trailing item in a 3/5-photo gallery spans both columns instead of leaving a half-empty row */
-.stop-gallery .guide-photo-item:last-child:nth-child(odd):not(:only-child) {
-  grid-column: 1 / -1;
-}
 /* the flagged photo becomes its own full-width row, pushed to the front */
 .stop-gallery .guide-photo-item.is-large:not(:only-child) {
   order: -1;
@@ -1492,7 +1488,6 @@ footer {
 .stop-gallery.is-featured .guide-photo-item video {
   width: 70%;
   height: auto;
-  margin: 0 auto;
 }
 .stop-gallery .guide-photo-item figcaption > span:first-child {
   overflow: hidden;

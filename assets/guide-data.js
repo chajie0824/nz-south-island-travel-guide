@@ -133,7 +133,7 @@ const guideDays = [
     origin:"Te Anau（蒂阿瑙）",
     stops:[
       {title:"Sandfly Bay（飞沙湾）", note:"沿途遇到明显的丁达尔效应，抵达后走沙滩、看海狮。", album:"DAY8", files:["沿途丁达尔效应.webp","SandflyBayBeach.webp","沙滩上的海狮.webp","沙滩上的海狮2f.webp"]},
-      {title:"St Clair Coast（圣克莱尔海岸）", note:"住宿在这一带，晚上继续泡澡、看夜景。", album:"DAY8", files:["海景住宿.webp","海景泡澡.webp","夜间泡澡.webp"]}
+      {title:"St Clair Coast（圣克莱尔海岸）", note:"住宿在这一带，晚上继续泡澡、看夜景。", album:"DAY8", files:["海景住宿.webp","海景泡澡.webp","夜间泡澡.webp"], largeFiles:["夜间泡澡.webp"], photoWidths:{"夜间泡澡.webp":60}}
     ]
   },
   {
