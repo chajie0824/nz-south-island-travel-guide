@@ -1442,17 +1442,15 @@ footer {
   line-height: 1.6;
 }
 .stop-gallery {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 11px;
   padding: 11px;
   border-top: 1px solid var(--line);
 }
 .stop-gallery .guide-photo-item {
-  flex: 1 1 0;
   min-width: 0;
-  align-self: start;
   border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
 }
 .stop-gallery .guide-photo-item img,
@@ -1463,12 +1461,19 @@ footer {
   aspect-ratio: auto;
   object-fit: contain;
 }
-.stop-gallery .guide-photo-item.is-large {
-  flex-grow: 1.8;
+/* a lone trailing item in a 3/5-photo gallery spans both columns instead of leaving a half-empty row */
+.stop-gallery .guide-photo-item:last-child:nth-child(odd):not(:only-child) {
+  grid-column: 1 / -1;
 }
-/* only-photo stops: fixed to the map card's height instead of sharing row width */
+/* the flagged photo becomes its own full-width row, pushed to the front */
+.stop-gallery .guide-photo-item.is-large:not(:only-child) {
+  order: -1;
+  grid-column: 1 / -1;
+}
+/* only-photo stops: fixed to the map card's height instead of stretching to fill a grid column */
 .stop-gallery .guide-photo-item:only-child {
-  flex: 0 0 auto;
+  grid-column: 1 / -1;
+  justify-self: start;
 }
 .stop-gallery .guide-photo-item:only-child img,
 .stop-gallery .guide-photo-item:only-child video {
@@ -1481,7 +1486,7 @@ footer {
   height: 320px;
 }
 .stop-gallery.is-featured .guide-photo-item {
-  flex: 1 1 100%;
+  grid-column: 1 / -1;
 }
 .stop-gallery.is-featured .guide-photo-item img,
 .stop-gallery.is-featured .guide-photo-item video {
@@ -1497,7 +1502,12 @@ footer {
   white-space: nowrap;
 }
 .food-guide { margin-top: 40px; }
-.food-guide-cards { display: grid; gap: 18px; }
+.food-guide-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
 .food-story-card {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -1635,9 +1645,9 @@ footer {
   .journey-origin::before,
   .journey-stop::before { left: -24px; }
   .journey-origin { align-items: flex-start; flex-direction: column; gap: 3px; }
-  .stop-gallery { flex-wrap: wrap; }
+  .stop-gallery { grid-template-columns: 1fr; }
   .stop-gallery .guide-photo-item,
-  .stop-gallery .guide-photo-item:only-child { flex: 1 1 100%; }
+  .stop-gallery .guide-photo-item:only-child { grid-column: 1 / -1; }
   .stop-gallery .guide-photo-item img,
   .stop-gallery .guide-photo-item video,
   .stop-gallery .guide-photo-item:only-child img,
