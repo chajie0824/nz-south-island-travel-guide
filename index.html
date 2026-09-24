@@ -86,6 +86,15 @@ function renderStopMedia(stop) {
 }
 
 function renderLegMap(fromLabel, fromQuery, toLabel, toQuery, drive) {
+  const sameLocation = fromQuery.trim().toLowerCase() === toQuery.trim().toLowerCase();
+  if (sameLocation) {
+    return `<div class="segment-map-card">
+      <div class="no-photo-note same-location-note"><span>SAME LOCATION</span><p>${escapeHTML(toLabel)}与${escapeHTML(fromLabel)}是同一地点，无需额外驾车。</p></div>
+      <div class="segment-map-meta">
+        <div><b>${escapeHTML(fromLabel)} → ${escapeHTML(toLabel)}</b>${drive ? `<span>${escapeHTML(drive)}</span>` : ""}</div>
+      </div>
+    </div>`;
+  }
   const embed = `https://maps.google.com/maps?saddr=${encodeURIComponent(fromQuery)}&daddr=${encodeURIComponent(toQuery)}&output=embed`;
   const directions = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(fromQuery)}&destination=${encodeURIComponent(toQuery)}&travelmode=driving`;
   return `<div class="segment-map-card">
@@ -101,15 +110,15 @@ function renderJourney(day) {
   let fromLabel = day.origin;
   let fromQuery = day.originQuery;
   const stops = day.stops.map((stop, index) => {
-    const media = renderStopMedia(stop);
+    const media = renderStopMedia(stop) || `<div class="no-photo-note"><span>NO PHOTO</span><p>这一站暂时没有实拍照片。</p></div>`;
     const segment = `<section class="journey-stop">
       <div class="journey-stop-head">
         <span class="journey-index">${String(index + 1).padStart(2, "0")}</span>
         <div><h3>${escapeHTML(stop.title)}</h3>${stop.note ? `<p>${escapeHTML(stop.note)}</p>` : ""}</div>
       </div>
-      <div class="journey-segment${media ? "" : " no-media"}">
+      <div class="journey-segment">
         ${renderLegMap(fromLabel, fromQuery, stop.title, stop.to, stop.drive)}
-        ${media ? `<div class="journey-visual">${media}</div>` : ""}
+        <div class="journey-visual">${media}</div>
       </div>
     </section>`;
     fromLabel = stop.title;

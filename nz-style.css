@@ -1531,8 +1531,6 @@ footer {
   align-items: stretch;
   border-top: 1px solid var(--line);
 }
-.journey-segment.no-media { grid-template-columns: 1fr; }
-.journey-segment.no-media .segment-map-card { border-right: 0; }
 .segment-map-card {
   display: flex;
   min-width: 0;

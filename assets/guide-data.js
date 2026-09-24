@@ -195,7 +195,7 @@ const routeMeta = {
     {to:"Woolworths Rolleston, New Zealand", drive:"约 25 分钟"},
     {to:"Rakaia Gorge, New Zealand", drive:"约 55 分钟"},
     {to:"Church of the Good Shepherd, Lake Tekapo, New Zealand", drive:"约 2 小时"}
-  ], stay:{area:"蒂卡波镇内 · 靠近湖区", query:"Church of the Good Shepherd, Lake Tekapo, New Zealand", drive:"约 5 分钟"}},
+  ], stay:{area:"蒂卡波镇内 · 靠近湖区", query:"Lake Tekapo, New Zealand", drive:"约 5 分钟"}},
   "02": {originQuery:"Church of the Good Shepherd, Lake Tekapo, New Zealand", legs:[
     {to:"Peter's Lookout, New Zealand", drive:"约 35 分钟"},
     {to:"Aoraki Mount Cook Village, New Zealand", drive:"约 45 分钟"},
