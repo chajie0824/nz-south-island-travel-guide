@@ -1490,8 +1490,9 @@ footer {
 }
 .stop-gallery.is-featured .guide-photo-item img,
 .stop-gallery.is-featured .guide-photo-item video {
-  width: 100%;
+  width: 70%;
   height: auto;
+  margin: 0 auto;
 }
 .stop-gallery .guide-photo-item figcaption > span:first-child {
   overflow: hidden;
