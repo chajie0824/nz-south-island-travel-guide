@@ -1443,24 +1443,42 @@ footer {
 }
 .stop-gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-start;
   gap: 11px;
   padding: 11px;
   border-top: 1px solid var(--line);
 }
 .stop-gallery .guide-photo-item {
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
   align-self: start;
   border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
 }
 .stop-gallery .guide-photo-item img,
 .stop-gallery .guide-photo-item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.stop-gallery .guide-photo-item.is-large {
+  flex-grow: 1.8;
+}
+/* only-photo stops: fixed to the map card's height instead of sharing row width */
+.stop-gallery .guide-photo-item:only-child {
+  flex: 0 0 auto;
+}
+.stop-gallery .guide-photo-item:only-child img,
+.stop-gallery .guide-photo-item:only-child video {
   width: auto;
   height: 255px;
   max-width: 100%;
-  aspect-ratio: auto;
-  object-fit: contain;
+}
+.stop-gallery .guide-photo-item:only-child.is-large img,
+.stop-gallery .guide-photo-item:only-child.is-large video {
+  height: 320px;
 }
 .stop-gallery.is-featured .guide-photo-item {
   flex: 1 1 100%;
@@ -1617,8 +1635,12 @@ footer {
   .journey-origin::before,
   .journey-stop::before { left: -24px; }
   .journey-origin { align-items: flex-start; flex-direction: column; gap: 3px; }
-  .stop-gallery .guide-photo-item { flex: 1 1 100%; }
+  .stop-gallery { flex-wrap: wrap; }
+  .stop-gallery .guide-photo-item,
+  .stop-gallery .guide-photo-item:only-child { flex: 1 1 100%; }
   .stop-gallery .guide-photo-item img,
-  .stop-gallery .guide-photo-item video { width: 100%; height: auto; }
+  .stop-gallery .guide-photo-item video,
+  .stop-gallery .guide-photo-item:only-child img,
+  .stop-gallery .guide-photo-item:only-child video { width: 100%; height: auto; }
   .segment-map-meta { align-items: flex-start; flex-direction: column; }
 }

@@ -61,12 +61,13 @@ const isFriendPhoto = file => /f\.[^.]+$/i.test(file);
 const cleanFilename = file => file.replace(/\.[^.]+$/, "").replace(/f$/i, "").replace(/([a-zA-Z])([一-龥])/g, "$1 · $2");
 const encodedPath = relative => relative.split("/").map(encodeURIComponent).join("/");
 
-function renderMedia(albumKey, files, fallbackLabel) {
+function renderMedia(albumKey, files, fallbackLabel, largeFiles) {
   return files.map((file, index) => {
     const relative = `照片/${albumKey}/${file}`;
     const caption = /^(IMG|DSC)_?\d+/i.test(file) ? fallbackLabel : cleanFilename(file);
     const credit = isFriendPhoto(file) ? `摄影：${friendCredit}` : `图源：${defaultCredit}`;
-    return `<figure class="guide-photo-item">
+    const isLarge = largeFiles && largeFiles.includes(file);
+    return `<figure class="guide-photo-item${isLarge ? " is-large" : ""}">
       <a href="${encodedPath(relative)}" target="_blank" rel="noopener">
         <img src="${encodedPath(relative)}" alt="${escapeHTML(caption)}" loading="lazy">
       </a>
@@ -80,7 +81,7 @@ function renderStopMedia(stop) {
   const media = keys.map(key => {
     const available = albums[key] || [];
     const selected = stop.files ? stop.files.filter(file => available.includes(file)) : available;
-    return renderMedia(key, selected, stop.title);
+    return renderMedia(key, selected, stop.title, stop.largeFiles);
   }).join("");
   return media ? `<div class="stop-gallery${stop.featured ? " is-featured" : ""}">${media}</div>` : "";
 }
@@ -110,7 +111,7 @@ function renderJourney(day) {
   let fromLabel = day.origin;
   let fromQuery = day.originQuery;
   const stops = day.stops.map((stop, index) => {
-    const media = renderStopMedia(stop) || `<div class="no-photo-note"><span>NO PHOTO</span><p>这一站暂时没有实拍照片。</p></div>`;
+    const media = renderStopMedia(stop) || `<div class="no-photo-note"><span>${escapeHTML(stop.placeholderTag || "NO PHOTO")}</span><p>${escapeHTML(stop.placeholder || "这一站暂时没有实拍照片。")}</p></div>`;
     const segment = `<section class="journey-stop">
       <div class="journey-stop-head">
         <span class="journey-index">${String(index + 1).padStart(2, "0")}</span>

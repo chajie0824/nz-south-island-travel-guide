@@ -11,9 +11,9 @@ const guideDays = [
     embed:"https://maps.google.com/maps?saddr=Christchurch%20Airport%2C%20New%20Zealand&daddr=Church%20of%20the%20Good%20Shepherd%2C%20Lake%20Tekapo%2C%20New%20Zealand&output=embed",
     origin:"Christchurch Airport（基督城机场）",
     stops:[
-      {title:"Woolworths Rolleston（WWS 补给）", note:"取车后先买水、早餐和接下来几天的零食，再开始长途驾驶。"},
+      {title:"Woolworths Rolleston（WWS 补给）", note:"取车后先买水、早餐和接下来几天的零食，再开始长途驾驶。", placeholderTag:"SUPPLY RUN", placeholder:"一箱水、面包和路上零食，为接下来几天做补给。"},
       {title:"Rakaia Gorge（拉凯亚峡谷）", note:"第一段真正进入南岛公路风景的停靠点。", album:"DAY1/拉凯亚峡谷"},
-      {title:"Church of the Good Shepherd & Lake Tekapo Stargazing（好牧羊人教堂与蒂卡波星空）", note:"傍晚看教堂，天黑后继续等星空。", album:"DAY1/好牧羊人教堂"}
+      {title:"Church of the Good Shepherd & Lake Tekapo Stargazing（好牧羊人教堂与蒂卡波星空）", note:"傍晚看教堂，天黑后继续等星空。", album:"DAY1/好牧羊人教堂", largeFiles:["DSC05360f.webp"]}
     ]
   },
   {
@@ -28,7 +28,7 @@ const guideDays = [
     embed:"https://maps.google.com/maps?saddr=Church%20of%20the%20Good%20Shepherd%2C%20Lake%20Tekapo%2C%20New%20Zealand&daddr=Tasman%20Valley%20Car%20Park%2C%20New%20Zealand&output=embed",
     origin:"Lake Tekapo（蒂卡波湖）",
     stops:[
-      {title:"Peter’s Lookout & Lake Pukaki（彼得观景点与普卡基湖）", note:"沿 80 号公路进入雪山段，同一段风景会不断变化。", albums:["DAY2/普卡基湖彼得观景点","DAY2/80号公路库克山拍摄点Peter's Lookout"]},
+      {title:"Peter’s Lookout & Lake Pukaki（彼得观景点与普卡基湖）", note:"沿 80 号公路进入雪山段，同一段风景会不断变化。", albums:["DAY2/普卡基湖彼得观景点","DAY2/80号公路库克山拍摄点Peter's Lookout"], largeFiles:["IMG_4320f.webp"]},
       {title:"Mount Cook（库克山）", note:"沿 80 号公路驶入库克山国家公园，雪山会逐渐铺满正前方。", albums:["DAY2/库克山前公路","DAY2/库克山"]},
       {title:"Tasman Glacier View Track & Blue Lakes Track（塔斯曼冰川观景步道与蓝湖步道）", note:"从 Tasman Valley 停车区出发，沿途可以看到蓝湖、冰碛地貌与冰川湖。", albums:["DAY2/Tasman Glacier","DAY2/Blue Lakes"]}
     ]
@@ -46,7 +46,7 @@ const guideDays = [
     origin:"Twizel（特威泽尔）",
     stops:[
       {title:"Clay Cliffs（奥玛拉玛粘土峭壁）", note:"上午先走粘土峭壁，再继续穿过林迪斯山口。", album:"DAY3/欧玛拉玛粘土峭壁"},
-      {title:"National Transport & Toy Museum（国家交通与玩具博物馆）", note:"位于瓦纳卡机场旁，里面有大量车辆、飞机和机械收藏。"},
+      {title:"National Transport & Toy Museum（国家交通与玩具博物馆）", note:"位于瓦纳卡机场旁，里面有大量车辆、飞机和机械收藏。", placeholderTag:"MUSEUM VISIT", placeholder:"馆内车辆、飞机与机械藏品很多，值得慢慢逛。"},
       {title:"That Wānaka Tree（瓦纳卡孤独之树）", note:"进入瓦纳卡后在湖边等光线，为当天收尾。", album:"DAY3/瓦纳卡孤独之树"}
     ]
   },
@@ -151,7 +151,7 @@ const guideDays = [
     stops:[
       {title:"Baldwin Street（鲍德温大街）", note:"上午先走鲍德温大街，之后直接离开达尼丁。", album:"DAY9", files:["鲍德温大街.webp"]},
       {title:"Kātiki Point Historic Reserve（卡蒂基角历史保护区）", note:"我们没有去摩拉基大圆石，而是到这里沿海岸步道看海豹宝宝。", album:"DAY9", files:["海豹宝宝1.webp","海豹宝宝2.webp"]},
-      {title:"Oamaru Blue Penguin Colony（奥玛鲁蓝企鹅保护中心）", note:"17:30 入场看蓝企鹅归巢。现场禁止拍照，因此这一站只记录实际体验与路线。"}
+      {title:"Oamaru Blue Penguin Colony（奥玛鲁蓝企鹅保护中心）", note:"17:30 入场看蓝企鹅归巢。现场禁止拍照，因此这一站只记录实际体验与路线。", placeholderTag:"NO PHOTOS ALLOWED", placeholder:"现场禁止拍照，蓝企鹅归巢全靠现场记忆。"}
     ]
   },
   {
@@ -182,10 +182,10 @@ const guideDays = [
     embed:"https://maps.google.com/maps?saddr=Christchurch%20Botanic%20Gardens%2C%20New%20Zealand&daddr=Christchurch%20Art%20Gallery%2C%20New%20Zealand&output=embed",
     origin:"Christchurch Central City（基督城市中心）",
     stops:[
-      {title:"Christchurch Botanic Gardens（基督城植物园）", note:"上午先逛植物园，把最后一天的活动集中在市中心。"},
+      {title:"Christchurch Botanic Gardens（基督城植物园）", note:"上午先逛植物园，把最后一天的活动集中在市中心。", placeholderTag:"GARDEN WALK", placeholder:"大片草坪与花园，适合放慢脚步走走。"},
       {title:"The Arts Centre Floating House（艺术中心悬浮房子）", note:"从植物园步行到艺术中心一带看悬浮房子装置。", album:"DAY11", files:["悬浮房子.webp"]},
-      {title:"Christchurch Art Gallery（基督城美术馆）", note:"下午逛完美术馆后直接前往机场。"},
-      {title:"Christchurch Airport（基督城机场）", note:"结束 11 天南岛中线与东线自驾。"}
+      {title:"Christchurch Art Gallery（基督城美术馆）", note:"下午逛完美术馆后直接前往机场。", placeholderTag:"GALLERY VISIT", placeholder:"现代艺术馆藏，室内不便拍照。"},
+      {title:"Christchurch Airport（基督城机场）", note:"结束 11 天南岛中线与东线自驾。", placeholderTag:"DEPARTURE", placeholder:"11 天南岛自驾在此收尾，准备登机回程。"}
     ]
   }
 ];
