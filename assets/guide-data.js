@@ -1,0 +1,264 @@
+const guideDays = [
+  {
+    day:"01", date:"9月12日", title:"基督城 → 蒂卡波湖",
+    summary:"落地后先解决补给，再把第一天的主线交给南岛公路、拉凯亚峡谷和蒂卡波星空。",
+    story:[
+      "在基督城机场取车后，我们先去 Woolworths（WWS）采购水、早餐和接下来几天需要的零食。刚落地就直接跑长途很累，先完成补给反而让后面的行程更从容。",
+      "之后经拉凯亚峡谷和梅思文一路开往蒂卡波。傍晚到好牧羊人教堂，天黑后继续等星空；这一天真正好看的不是某一个收费项目，而是公路、峡谷和夜空连在一起的感觉。"
+    ],
+    timeline:["基督城机场取车","Woolworths 补给","拉凯亚峡谷短停","梅思文吃饭/休息","好牧羊人教堂与星空"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Christchurch+Airport%2C+New+Zealand&destination=Lake+Tekapo%2C+New+Zealand&travelmode=driving&waypoints=Woolworths+Rolleston%2C+New+Zealand%7CRakaia+Gorge%2C+New+Zealand%7CMethven%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Christchurch%20Airport%2C%20New%20Zealand&daddr=Church%20of%20the%20Good%20Shepherd%2C%20Lake%20Tekapo%2C%20New%20Zealand&output=embed",
+    origin:"Christchurch Airport（基督城机场）",
+    stops:[
+      {title:"Woolworths Rolleston（WWS 补给）", note:"取车后先买水、早餐和接下来几天的零食，再开始长途驾驶。"},
+      {title:"Rakaia Gorge（拉凯亚峡谷）", note:"第一段真正进入南岛公路风景的停靠点。", album:"DAY1/拉凯亚峡谷"},
+      {title:"Church of the Good Shepherd & Lake Tekapo Stargazing（好牧羊人教堂与蒂卡波星空）", note:"傍晚看教堂，天黑后继续等星空。", album:"DAY1/好牧羊人教堂"}
+    ]
+  },
+  {
+    day:"02", date:"9月13日", title:"蒂卡波湖 → 库克山 → 特威泽尔",
+    summary:"这一天是整趟旅程最密集的雪山与冰川公路日，从普卡基湖一路进入库克山区域。",
+    story:[
+      "离开蒂卡波后沿 80 号公路前往 Mount Cook。Peter’s Lookout 和普卡基湖适合顺路停靠，之后继续沿着湖岸驶入雪山深处。",
+      "到库克山后，我们把重点放在 Tasman Glacier 与 Blue Lakes 一带。照片里能很清楚地看到公路、湖水、雪山和冰川的层次，这一天适合慢慢开、看到安全停车位再停。晚上住特威泽尔。"
+    ],
+    timeline:["蒂卡波出发","普卡基湖与 Peter’s Lookout","80号公路雪山段","库克山区域","Tasman Glacier / Blue Lakes","特威泽尔住宿"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Lake+Tekapo%2C+New+Zealand&destination=Twizel%2C+New+Zealand&travelmode=driving&waypoints=Peter's+Lookout%2C+New+Zealand%7CTasman+Glacier+Viewpoint%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Church%20of%20the%20Good%20Shepherd%2C%20Lake%20Tekapo%2C%20New%20Zealand&daddr=Tasman%20Valley%20Car%20Park%2C%20New%20Zealand&output=embed",
+    origin:"Lake Tekapo（蒂卡波湖）",
+    stops:[
+      {title:"Peter’s Lookout & Lake Pukaki（彼得观景点与普卡基湖）", note:"沿 80 号公路进入雪山段，同一段风景会不断变化。", albums:["DAY2/普卡基湖彼得观景点","DAY2/80号公路库克山拍摄点Peter's Lookout"]},
+      {title:"Mount Cook（库克山）", note:"沿 80 号公路驶入库克山国家公园，雪山会逐渐铺满正前方。", albums:["DAY2/库克山前公路","DAY2/库克山"]},
+      {title:"Tasman Glacier View Track & Blue Lakes Track（塔斯曼冰川观景步道与蓝湖步道）", note:"从 Tasman Valley 停车区出发，沿途可以看到蓝湖、冰碛地貌与冰川湖。", albums:["DAY2/Tasman Glacier","DAY2/Blue Lakes"]}
+    ]
+  },
+  {
+    day:"03", date:"9月14日", title:"特威泽尔 → 奥玛拉玛 → 瓦纳卡",
+    summary:"经奥玛拉玛粘土峭壁、林迪斯山口，到瓦纳卡的 National Transport & Toy Museum，再到孤独之树收尾。",
+    story:[
+      "上午从特威泽尔前往奥玛拉玛粘土峭壁，之后穿过林迪斯山口。",
+      "接着到瓦纳卡机场旁的 National Transport & Toy Museum，里面有大量车辆、飞机和机械收藏；之后进入瓦纳卡，在孤独之树附近等光线。"
+    ],
+    timeline:["特威泽尔出发","奥玛拉玛粘土峭壁","林迪斯山口","National Transport & Toy Museum","瓦纳卡孤独之树"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Twizel%2C+New+Zealand&destination=Wanaka%2C+New+Zealand&travelmode=driving&waypoints=Clay+Cliffs%2C+Omarama%2C+New+Zealand%7CLindis+Pass+Lookout%2C+New+Zealand%7CNational+Transport+and+Toy+Museum%2C+Wanaka%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Twizel%2C%20New%20Zealand&daddr=Wanaka%2C%20New%20Zealand&output=embed",
+    origin:"Twizel（特威泽尔）",
+    stops:[
+      {title:"Clay Cliffs（奥玛拉玛粘土峭壁）", note:"上午先走粘土峭壁，再继续穿过林迪斯山口。", album:"DAY3/欧玛拉玛粘土峭壁"},
+      {title:"National Transport & Toy Museum（国家交通与玩具博物馆）", note:"位于瓦纳卡机场旁，里面有大量车辆、飞机和机械收藏。"},
+      {title:"That Wānaka Tree（瓦纳卡孤独之树）", note:"进入瓦纳卡后在湖边等光线，为当天收尾。", album:"DAY3/瓦纳卡孤独之树"}
+    ]
+  },
+  {
+    day:"04", date:"9月15日", title:"瓦纳卡 → 箭镇 → 皇后镇",
+    summary:"射击、箭镇和皇后镇 Skyline 组成了这一天，内容很满但路线仍然顺路。",
+    story:[
+      "离开瓦纳卡后先去 Real Guns。实际体验比单纯在地图上看更有记忆点，场地在山谷里，雪景和射击放在一起很特别。之后前往箭镇，在老街和华人淘金遗址一带散步。",
+      "抵达皇后镇后开始使用 Skyline 缆车票。我们的结论很直接：如果会在皇后镇待三天，推荐买三日缆车票。我们三天一共坐了五次，白天、傍晚和天气变化后的景色都不一样，比单次购买更划算。",
+      "皇后镇市区车位很少，很多路边车位还要收费，所以我们几天都是直接把车停在住的地方，剩下的行程基本靠走路解决，市区范围内走走其实很快；建议选住宿时优先挑离中心近、本身带车位的地方。另外皇后镇热门项目（缆车、快艇、鲨鱼艇之类）最好提前很久就订好，不要等到临近才处理。"
+    ],
+    timeline:["瓦纳卡出发","Real Guns","箭镇","皇后镇入住","Skyline 天际缆车"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Wanaka%2C+New+Zealand&destination=Queenstown%2C+New+Zealand&travelmode=driving&waypoints=Real+Guns+New+Zealand%7CArrowtown%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Wanaka%2C%20New%20Zealand&daddr=Queenstown%2C%20New%20Zealand&output=embed",
+    origin:"Wānaka（瓦纳卡）",
+    stops:[
+      {title:"Real Guns New Zealand（实弹射击场）", note:"山谷、雪景和射击体验放在一起，是当天记忆点最强的一站。", album:"DAY4/realgun"},
+      {title:"Arrowtown（箭镇）", note:"在老街和华人淘金遗址一带散步。", album:"DAY4/箭镇"},
+      {title:"Skyline Queenstown（皇后镇天际缆车）", note:"如果在皇后镇待三天，推荐买三日票。我们三天坐了五次。", album:"DAY4/皇后镇 Skyline 天际缆车"}
+    ],
+    callout:"皇后镇连住三天的话，三日缆车票很值得：我们三天坐了 5 次。"
+  },
+  {
+    day:"05", date:"9月16日", title:"雨天皇后镇 → 格林诺奇 → 皇后镇",
+    summary:"原本可以把这一天留给皇后镇项目，但鲨鱼艇因天气取消，我们才临时改去格林诺奇。",
+    story:[
+      "天气正常时，这一天很适合集中玩皇后镇项目，例如 Hydro Attack 鲨鱼艇、喷射快艇或其他湖上活动。我们原本也这样安排，但因为天气原因项目取消，所以不要把我们的格林诺奇路线理解成唯一推荐走法。",
+      "临时改去格林诺奇后，沿 Queenstown–Glenorchy Road 一路向北。雨夜让湖边和码头的气氛完全不同，照片不一定是传统晴天大片，但很能代表当天真实的旅行状态。"
+    ],
+    timeline:["雨天皇后镇","原订项目因天气取消","Queenstown–Glenorchy Road","格林诺奇雨夜","返回皇后镇"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Queenstown%2C+New+Zealand&destination=Queenstown%2C+New+Zealand&travelmode=driving&waypoints=Glenorchy%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Queenstown%2C%20New%20Zealand&daddr=Glenorchy%2C%20New%20Zealand&output=embed",
+    origin:"Queenstown（皇后镇）",
+    stops:[
+      {title:"Queenstown in the Rain（雨天皇后镇）", note:"原订 Hydro Attack 鲨鱼艇等项目因天气取消；天气好时，Day 05 更适合集中玩皇后镇项目。", album:"DAY5/雨天皇后镇"},
+      {title:"Glenorchy（格林诺奇）", note:"我们临时改走 Queenstown–Glenorchy Road；雨夜的湖边和码头是另一种气氛，之后原路返回皇后镇。", album:"DAY5/格林诺奇雨夜"}
+    ],
+    callout:"天气好：优先安排皇后镇项目；项目取消：格林诺奇可作为临时替代。"
+  },
+  {
+    day:"06", date:"9月17日", title:"皇后镇玩到晚上 → 蒂阿瑙",
+    summary:"这一天大部分时间仍在皇后镇，我们直到晚上八九点才离开，夜间开往蒂阿瑙。",
+    story:[
+      "白天继续在皇后镇活动，也再次使用了三日缆车票，并在山上自助餐厅看景。途中还有小店、吃喝和湖边停留，因此这一天并不是早上离开皇后镇的纯转场日。",
+      "我们实际到晚上约八九点才出发前往蒂阿瑙。抵达后已经很晚，这种走法会把皇后镇时间利用到最后，但也意味着 Queenstown–Te Anau 约两小时车程要在夜里完成，不适合照搬给不习惯夜间山路的人。"
+    ],
+    timeline:["皇后镇继续游玩","Skyline 与山上自助餐","傍晚继续吃喝","20:00–21:00 左右离开皇后镇","夜间抵达蒂阿瑙"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Queenstown%2C+New+Zealand&destination=Te+Anau%2C+New+Zealand&travelmode=driving",
+    embed:"https://maps.google.com/maps?saddr=Queenstown%2C%20New%20Zealand&daddr=Te%20Anau%2C%20New%20Zealand&output=embed",
+    origin:"Queenstown（皇后镇）",
+    stops:[
+      {title:"Skyline Queenstown & Stratosfare Restaurant（天际缆车与山顶自助餐）", note:"白天继续留在皇后镇，把三日缆车票用到最后。", album:"DAY6", files:["缆车上自助餐厅景色.webp"]},
+      {title:"Queenstown（皇后镇继续吃喝）", note:"白天继续逛小店，也从皇后镇民宿看了最后一眼周围的山景；晚上八九点左右才离开。", album:"DAY6", files:["路边小店.webp","民宿风景.webp"]},
+      {title:"Lake Te Anau（蒂阿瑙湖畔）", note:"夜间抵达蒂阿瑙后，在湖边小酌，为这一天收尾。", album:"DAY6", files:["蒂阿瑙湖前小酌.webp"]}
+    ]
+  },
+  {
+    day:"07", date:"9月18日", title:"蒂阿瑙 → 米尔福德峡湾 → 蒂阿瑙",
+    summary:"为了赶上 11 点的峡湾巡游，我们早上从蒂阿瑙直接开往米尔福德峡湾，回程再慢慢看沿途景点。",
+    story:[
+      "我们预订的是上午 11 点的巡游，因此早上沿 SH94 直接赶到米尔福德峡湾，中途没有慢慢停靠。单程纯驾驶约两小时，最好给停车、步行到码头和办理登船留出余量。",
+      "巡游结束后，回程才开始慢慢看公路沿线的雪山和观景点，并在 1855 观景点一带停留。途中还遇到啄羊鹦鹉，湿润天气下的峡湾瀑布也很明显。"
+    ],
+    timeline:["蒂阿瑙早出发","直接前往米尔福德峡湾","11:00 峡湾巡游","回程慢看 SH94 与 1855 观景点","返程遇到啄羊鹦鹉"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Te+Anau%2C+New+Zealand&destination=Te+Anau%2C+New+Zealand&travelmode=driving&waypoints=Milford+Sound+Visitor+Terminal%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Te%20Anau%2C%20New%20Zealand&daddr=Milford%20Sound%20Visitor%20Terminal%2C%20New%20Zealand&output=embed",
+    origin:"Te Anau（蒂阿瑙）",
+    stops:[
+      {title:"Milford Sound Cruise（米尔福德峡湾巡游）", note:"我们预订了上午 11 点的班次，所以早上从蒂阿瑙直接开到 Visitor Terminal 旁边的免费停车场；码头旁的停车场更贵，没必要为了省几步路多花钱。", album:"DAY7", files:["峡湾.webp","巡游瀑布.webp"]},
+      {title:"State Highway 94 & 1855 Lookout（SH94 公路与 1855 观景点）", note:"巡游结束后沿 SH94 返回，回程再慢慢停靠雪山和公路观景点。", album:"DAY7", files:["1855观景台f.webp"]},
+      {title:"Kea on the Return Drive（返程遇见啄羊鹦鹉）", note:"这是计划外的相遇，也是当天最惊喜的片段之一；之后直接返回蒂阿瑙。", album:"DAY7", files:["返程路上遇到的啄羊鹦鹉1f.webp","返程路上遇到的啄羊鹦鹉2f.webp"]}
+    ]
+  },
+  {
+    day:"08", date:"9月19日", title:"蒂阿瑙 → 达尼丁海岸",
+    summary:"从峡湾地区横穿到东海岸，路上遇到丁达尔光，抵达后去 Sandfly Bay 看海狮，晚上住进海景住宿。",
+    story:[
+      "这一天距离不短，沿途能看到明显的丁达尔效应；先到飞沙湾，走沙滩、看海狮，再到达尼丁的圣克莱尔海岸。",
+      "住宿也在圣克莱尔海岸一带，晚上继续泡澡、看夜景。"
+    ],
+    timeline:["蒂阿瑙出发","沿途光线与公路","Sandfly Bay Beach","沙滩海狮","海景住宿与泡澡"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Te+Anau%2C+New+Zealand&destination=Dunedin%2C+New+Zealand&travelmode=driving&waypoints=Sandfly+Bay%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Te%20Anau%2C%20New%20Zealand&daddr=Sandfly%20Bay%2C%20New%20Zealand&output=embed",
+    origin:"Te Anau（蒂阿瑙）",
+    stops:[
+      {title:"Sandfly Bay（飞沙湾）", note:"沿途遇到明显的丁达尔效应，抵达后走沙滩、看海狮。", album:"DAY8", files:["沿途丁达尔效应.webp","SandflyBayBeach.webp","沙滩上的海狮.webp","沙滩上的海狮2f.webp"]},
+      {title:"St Clair Coast（圣克莱尔海岸）", note:"住宿在这一带，晚上继续泡澡、看夜景。", album:"DAY8", files:["海景住宿.webp","海景泡澡.webp","夜间泡澡.webp"]}
+    ]
+  },
+  {
+    day:"09", date:"9月20日", title:"达尼丁 → Kātiki Point → 奥玛鲁",
+    summary:"从鲍德温大街前往 Kātiki Point 看海豹，傍晚 17:30 再到奥玛鲁看蓝企鹅归巢。",
+    story:[
+      "上午先去鲍德温大街。之后没有按原计划绕去信号山、阿拉莫纳或摩拉基大圆石，而是直接开往 Kātiki Point Historic Reserve 一带。",
+      "Kātiki Point 的重点是海岸、灯塔方向的步道和海豹。我们看到了海豹宝宝，因此这一站完全可以取代摩拉基大圆石，尤其适合更想看野生动物的人。",
+      "之后继续前往奥玛鲁，17:30 到 Oamaru Blue Penguin Colony 看蓝企鹅归巢。现场禁止拍照，所以这一站没有照片，但很适合作为当天的收尾。"
+    ],
+    timeline:["达尼丁出发","鲍德温大街","Kātiki Point 看海豹","17:30 蓝企鹅归巢","奥玛鲁住宿"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Dunedin%2C+New+Zealand&destination=Oamaru+Blue+Penguin+Colony%2C+New+Zealand&travelmode=driving&waypoints=Baldwin+Street%2C+Dunedin%2C+New+Zealand%7CKatiki+Point+Lighthouse%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Baldwin%20Street%2C%20Dunedin%2C%20New%20Zealand&daddr=Katiki%20Point%20Lighthouse%2C%20New%20Zealand&output=embed",
+    origin:"Dunedin（达尼丁）",
+    stops:[
+      {title:"Baldwin Street（鲍德温大街）", note:"上午先走鲍德温大街，之后直接离开达尼丁。", album:"DAY9", files:["鲍德温大街.webp"]},
+      {title:"Kātiki Point Historic Reserve（卡蒂基角历史保护区）", note:"我们没有去摩拉基大圆石，而是到这里沿海岸步道看海豹宝宝。", album:"DAY9", files:["海豹宝宝1.webp","海豹宝宝2.webp"]},
+      {title:"Oamaru Blue Penguin Colony（奥玛鲁蓝企鹅保护中心）", note:"17:30 入场看蓝企鹅归巢。现场禁止拍照，因此这一站只记录实际体验与路线。"}
+    ]
+  },
+  {
+    day:"10", date:"9月21日", title:"奥玛鲁 → Timaru 补给 → 基督城",
+    summary:"当天只在 Timaru 补给和吃午餐，然后直接进入基督城。",
+    story:[
+      "从奥玛鲁沿 SH1 北上，在 Timaru 停下来补给、吃午餐，之后直接到基督城。相比在返程日继续堆景点，这种走法更轻松，也给基督城市区留出了时间。",
+      "到基督城后去看了教堂，但现场正在修缮，实际没有看到太多；市区涂鸦反而更适合边走边看。晚上去吃自助餐，为长途自驾的最后一个完整夜晚收尾。"
+    ],
+    timeline:["奥玛鲁出发","Timaru 补给与午餐","直接前往基督城","修缮中的教堂","市区涂鸦","晚餐自助"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Oamaru%2C+New+Zealand&destination=Christchurch%2C+New+Zealand&travelmode=driving&waypoints=Timaru%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Oamaru%2C%20New%20Zealand&daddr=Christchurch%2C%20New%20Zealand&output=embed",
+    origin:"Oamaru（奥玛鲁）",
+    stops:[
+      {title:"Timaru（蒂马鲁补给与午餐）", note:"中途只做补给和吃午餐，之后直接前往基督城。", album:"DAY10", files:["Timaru中途午餐.webp"]},
+      {title:"Christchurch Central City（基督城市中心）", note:"教堂正在修缮，没有看到太多；市区涂鸦更适合边走边看，晚上用自助餐结束最后一个完整夜晚。住宿大致也在市中心南侧，不再重复增加住宿站。", album:"DAY10", files:["基督城市区涂鸦.webp","基督城市区晚餐.webp"]}
+    ]
+  },
+  {
+    day:"11", date:"9月22日", title:"基督城市区 → 机场",
+    summary:"最后一天不赶远路：上午植物园和悬浮房子，下午基督城美术馆，然后去机场。",
+    story:[
+      "上午先逛基督城植物园，再到艺术中心一带看悬浮房子装置。最后一天把活动集中在市中心，走路串联比再次开车去郊外更合适。",
+      "下午去了 Christchurch Art Gallery，逛完后直接前往机场。这种安排内容不空，也不会因为最后一刻塞入远郊景点而影响航班。"
+    ],
+    timeline:["基督城植物园","艺术中心一带的悬浮房子","Christchurch Art Gallery","前往机场","返程航班"],
+    route:"https://www.google.com/maps/dir/?api=1&origin=Christchurch+Botanic+Gardens%2C+New+Zealand&destination=Christchurch+Airport%2C+New+Zealand&travelmode=driving&waypoints=Christchurch+Art+Gallery%2C+New+Zealand",
+    embed:"https://maps.google.com/maps?saddr=Christchurch%20Botanic%20Gardens%2C%20New%20Zealand&daddr=Christchurch%20Art%20Gallery%2C%20New%20Zealand&output=embed",
+    origin:"Christchurch Central City（基督城市中心）",
+    stops:[
+      {title:"Christchurch Botanic Gardens（基督城植物园）", note:"上午先逛植物园，把最后一天的活动集中在市中心。"},
+      {title:"The Arts Centre Floating House（艺术中心悬浮房子）", note:"从植物园步行到艺术中心一带看悬浮房子装置。", album:"DAY11", files:["悬浮房子.webp"]},
+      {title:"Christchurch Art Gallery（基督城美术馆）", note:"下午逛完美术馆后直接前往机场。"},
+      {title:"Christchurch Airport（基督城机场）", note:"结束 11 天南岛中线与东线自驾。"}
+    ]
+  }
+];
+
+const routeMeta = {
+  "01": {originQuery:"Christchurch Airport, New Zealand", legs:[
+    {to:"Woolworths Rolleston, New Zealand", drive:"约 25 分钟"},
+    {to:"Rakaia Gorge, New Zealand", drive:"约 55 分钟"},
+    {to:"Church of the Good Shepherd, Lake Tekapo, New Zealand", drive:"约 2 小时"}
+  ], stay:{area:"蒂卡波镇内 · 靠近湖区", query:"Church of the Good Shepherd, Lake Tekapo, New Zealand", drive:"约 5 分钟"}},
+  "02": {originQuery:"Church of the Good Shepherd, Lake Tekapo, New Zealand", legs:[
+    {to:"Peter's Lookout, New Zealand", drive:"约 35 分钟"},
+    {to:"Aoraki Mount Cook Village, New Zealand", drive:"约 45 分钟"},
+    {to:"Tasman Valley Car Park, New Zealand", drive:"约 10 分钟"}
+  ], stay:{area:"特威泽尔镇内", query:"Twizel, New Zealand", drive:"约 1 小时"}},
+  "03": {originQuery:"Twizel, New Zealand", legs:[
+    {to:"Clay Cliffs, Omarama, New Zealand", drive:"约 45 分钟"},
+    {to:"National Transport and Toy Museum, Wanaka, New Zealand", drive:"约 1 小时 30 分钟"},
+    {to:"That Wanaka Tree, New Zealand", drive:"约 15 分钟"}
+  ], stay:{area:"瓦纳卡机场一带", query:"Wanaka Airport, New Zealand", drive:"约 20 分钟"}},
+  "04": {originQuery:"Wanaka Airport, New Zealand", legs:[
+    {to:"Real Guns New Zealand", drive:"约 10 分钟"},
+    {to:"Arrowtown, New Zealand", drive:"约 50 分钟"},
+    {to:"Skyline Queenstown, New Zealand", drive:"约 25 分钟"}
+  ], stay:{area:"皇后镇中心南侧 · 湖边步行范围", query:"Queenstown Central, New Zealand", drive:"约 5–10 分钟"}},
+  "05": {originQuery:"Queenstown Central, New Zealand", legs:[
+    {to:"Skyline Queenstown, New Zealand", drive:"约 5–10 分钟"},
+    {to:"Glenorchy Wharf, New Zealand", drive:"约 50 分钟"}
+  ], stay:{area:"皇后镇中心南侧 · 续住第二晚", query:"Queenstown Central, New Zealand", drive:"返程约 50 分钟"}},
+  "06": {originQuery:"Queenstown Central, New Zealand", legs:[
+    {to:"Skyline Queenstown, New Zealand", drive:"约 5–10 分钟"},
+    {to:"Queenstown, New Zealand", drive:"镇内活动"},
+    {to:"Te Anau, New Zealand", drive:"约 2 小时"}
+  ]},
+  "07": {originQuery:"Te Anau, New Zealand", legs:[
+    {to:"Milford Sound Visitor Terminal, New Zealand", drive:"约 2 小时"},
+    {to:"Homer Tunnel, New Zealand", drive:"返程约 25 分钟"},
+    {to:"Monkey Creek, New Zealand", drive:"返程约 15 分钟"}
+  ], stay:{area:"蒂阿瑙湖南端 · 续住第二晚", query:"Te Anau, New Zealand", drive:"约 1 小时 30 分钟"}},
+  "08": {originQuery:"Te Anau, New Zealand", legs:[
+    {to:"Sandfly Bay, New Zealand", drive:"约 3 小时 30 分钟"},
+    {to:"St Clair, Dunedin, New Zealand", drive:"约 35 分钟"}
+  ]},
+  "09": {originQuery:"St Clair, Dunedin, New Zealand", legs:[
+    {to:"Baldwin Street, Dunedin, New Zealand", drive:"约 25 分钟"},
+    {to:"Katiki Point Lighthouse, New Zealand", drive:"约 1 小时 20 分钟"},
+    {to:"Oamaru Blue Penguin Colony, New Zealand", drive:"约 35 分钟"}
+  ], stay:{area:"奥玛鲁镇中心北侧", query:"Oamaru North, New Zealand", drive:"约 10 分钟"}},
+  "10": {originQuery:"Oamaru, New Zealand", legs:[
+    {to:"Timaru, New Zealand", drive:"约 1 小时 15 分钟"},
+    {to:"Christchurch Central City, New Zealand", drive:"约 2 小时"}
+  ]},
+  "11": {originQuery:"Christchurch Central City, New Zealand", legs:[
+    {to:"Christchurch Botanic Gardens, New Zealand", drive:"约 10 分钟"},
+    {to:"The Arts Centre Te Matatiki Toi Ora, Christchurch, New Zealand", drive:"步行约 5 分钟"},
+    {to:"Christchurch Art Gallery, New Zealand", drive:"步行约 5 分钟"},
+    {to:"Christchurch Airport, New Zealand", drive:"约 20 分钟"}
+  ]}
+};
+
+for (const day of guideDays) {
+  const meta = routeMeta[day.day];
+  day.originQuery = meta.originQuery;
+  day.stay = meta.stay;
+  day.stops.forEach((stop, index) => Object.assign(stop, meta.legs[index] || {}));
+}
+
+const foodAlbum = "皇后镇穷鬼美食推荐";
+const foodCards = [
+  {tag:"最推荐", title:"Saigon Kingdom", text:"午餐时段 NZ$19 的 Pho 很值，而且确实好吃。如果只选一顿平价正餐，我们会优先推荐这里。", files:["SaigonKingdom.webp"], top:true},
+  {tag:"晚餐推荐", title:"Flame", text:"奶油黑虎虾饭最惊喜，猪排也不错；不过整体调味偏甜，方块觉得甜度稍高。", files:["flame黑虎虾汤饭.webp","flame猪排.webp"]},
+  {tag:"小吃", title:"Taco Land", text:"肉汁很多，吃起来很满足，是我们会直接说“好吃”的一项。", files:["tacoLand.webp"]},
+  {tag:"饮品", title:"Windy Ridge Milk", text:"牛奶味非常浓郁，在堪培拉没有喝到过这么厚实的奶味，值得试一次。", files:["WindyRidgeMilk.webp"]},
+  {tag:"早餐 / 下午茶", title:"Ferg 系列", text:"甜甜圈不错，适合早餐或下午茶。Fergburger 最大特点是分量大，味道就是正常好吃的汉堡，没有夸张到非吃不可。", files:["大脸汉堡.webp","大脸汉堡甜甜圈.webp"]},
+  {tag:"Gelato", title:"Patagonia 与 Ferg", text:"两家的味道差距不大，都是正常的 Gelato 风味，没有特别明显的必点款。", files:["大脸汉堡GELATO.webp","Patagonia1.webp","Patagonia2.webp"]}
+];
